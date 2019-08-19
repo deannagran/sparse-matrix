@@ -108,8 +108,6 @@ public:
         return *minor;
     }
 
-
-
     int getDeterminant(SparseMatrix *m){
         //formula: det = SUM of (-1)^(i+j) * a[i,j] * det(minor(a[i, j]))
         int determinant = 0;
@@ -151,48 +149,6 @@ int main() {
     int test;
     string token;
 
-    /*while(cin.good()){
-        cout << "enter line: ";
-        getline(cin, line);
-        neg = false;
-        if(line == "q"){
-            break;
-        }
-        row++;
-        col = 0;
-
-        for( char c : line ){
-            //count spaces between elements to determine if its square.
-            if(isspace(c, std::cin.getloc())) ++spaceCount ;
-        }
-        rowCount++;
-
-        //parse integers in this line
-        for( char c : line ){
-            //check if character is NON-ZERO digit. if so, add value to matrix.
-            // otherwise, continue, but increment row/col to represent '0' placeholder.
-
-            if(isdigit(c, std::cin.getloc())){
-                if(c != '0'){
-                    if(neg){
-                        value = -(c - '0');
-                    }else{
-                        value = (c - '0');
-                    }
-                    matrix->addToSparseMatrix(value, row, col);
-                }
-                col++;
-            }
-            else if(c == '-'){
-                neg = true;
-            }
-            else{
-                neg = false;
-            }
-        }
-
-    }
-*/
     while(cin.good()){
         getline(cin, line);
         row++;
